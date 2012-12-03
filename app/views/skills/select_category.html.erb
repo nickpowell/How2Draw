@@ -1,0 +1,12 @@
+EDIT ME:  User skill level is:  <%= @users_skill_level %>
+
+<p>What would you like to draw?</p>
+
+<ul>
+	<% @categories.each do |c| %>
+    <li><%= c.name %></li>
+	<% end %>
+</ul>
+
+<hr>
+

@@ -83,10 +83,11 @@ class SkillsController < ApplicationController
   
   def intro
     @possible_skills = Skill.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @skills }
-    end
   end
+    
+  def select_category
+    @users_skill_level = params[:id]
+    @categories = Category.all
+  end
+  
 end

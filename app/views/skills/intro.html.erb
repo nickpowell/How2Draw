@@ -6,6 +6,8 @@
 
 <ul>
 	<% @possible_skills.each do |s| %>
-   	<li><%= s.name %></li>
+   	<li>
+			<%= link_to s.name, :controller => "skills", :action => "select_category", :id => s.id %>
+		</li>
 	<% end %>
 </ul>
