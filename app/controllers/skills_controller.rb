@@ -80,4 +80,13 @@ class SkillsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def intro
+    @skills = Skill.all
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @skills }
+    end
+  end
 end

@@ -1,6 +1,8 @@
 DrawWithMe::Application.routes.draw do
   resources :skills
 
+  root :to => 'skills#intro'
+
   resources :links
 
   resources :subcategories
