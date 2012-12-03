@@ -82,7 +82,7 @@ class SkillsController < ApplicationController
   end
   
   def intro
-    @skills = Skill.all
+    @possible_skills = Skill.all
 
     respond_to do |format|
       format.html # index.html.erb

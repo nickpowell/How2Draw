@@ -1,1 +1,11 @@
-Welcome to the intro
+<h1>Welcome to Draw With Me</h1>
+
+<h3>A drawing tutorial application!</h3>
+
+<p>Please select your drawing skill level.</p>
+
+<ul>
+	<% @possible_skills.each do |s| %>
+   	<li><%= s.name %></li>
+	<% end %>
+</ul>
