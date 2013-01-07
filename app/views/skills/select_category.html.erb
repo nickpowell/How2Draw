@@ -1,12 +1,19 @@
-EDIT ME:  User skill level is:  <%= @users_skill_level %>
+<h2>
+&nbsp;Welcome <%= @users_skill_level %> Artist!
+</h2>
 
-<p>What would you like to draw?</p>
+<h3>  &nbsp;  &nbsp;What would you like to draw?</h3>
 
 <ul>
 	<% @categories.each do |c| %>
-    <li><%= c.name %></li>
+    <li><a href=""><%= c.name %></li>
 	<% end %>
 </ul>
 
-<hr>
+<br><br>
 
+<center>
+	<h6>
+		Created by Nick Powell
+	</h6>
+</center>

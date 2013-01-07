@@ -1,18 +1,24 @@
+<style type="text/css">
+td, th {
+  border: thin solid #D7E0E0;
+}
+th {
+  background-color: #D7E0E0;"
+}
+</style>
+
 <h1>Listing links</h1>
 
 <table>
   <tr>
     <th>Name</th>
     <th>Subcategory</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @links.each do |link| %>
   <tr>
-    <td><%= link.name %></td>
-    <td><%= link.subcategory_id %></td>
+    <td><%= link_to link.name, link.views %></td>
+    <td><%= link.subcategory.name %></td>
     <td><%= link_to 'Show', link %></td>
     <td><%= link_to 'Edit', edit_link_path(link) %></td>
     <td><%= link_to 'Destroy', link, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -86,8 +86,8 @@ class SkillsController < ApplicationController
   end
     
   def select_category
-    @users_skill_level = params[:id]
     @categories = Category.all
+    @users_skill_level = Skill.find(params[:id]).name
   end
   
 end

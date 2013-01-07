@@ -15,7 +15,7 @@
     <%= f.label :name %>
     <%= f.text_field :name %>
     <%= f.label :category_id %>
-	<%= f.select :category_id, Category.all.collect {|c| [c.name, c.id]} %> <%= f.submit %>
+	  <%= f.select :category_id, Category.all.collect {|c| [c.name, c.id]} %> <%= f.submit %>
 	<br />
   </div>
 <% end %>

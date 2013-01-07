@@ -13,15 +13,18 @@
 
   <div class="field">
 
-    <%= f.label :URL %>
+    <%= f.label :name %>
     <%= f.text_field :name %> <p>
-		
+
     <%= f.label :subcategory_id %>
     <%= f.select :subcategory_id, Subcategory.all.collect {|c| [c.name, c.id]} %> <p>
-		
-	<%= f.label :views %>
-	<%= f.text_field :views %> <p>	
-		
+
+    <%= f.label :skill_id %>
+    <%= f.select :skill_id, Skill.all.collect {|c| [c.name, c.id]} %> <p>
+
+      <%= f.label :url %>
+    <%= f.text_field :views %> <p>	
+
 	<%= f.submit %>
 	<br />
   </div>
