@@ -80,14 +80,26 @@ class SkillsController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
+
   def intro
     @possible_skills = Skill.all
   end
-    
+
   def select_category
     @categories = Category.all
     @users_skill_level = Skill.find(params[:id]).name
+    session[:skill_level] = Skill.find(params[:id])
   end
-  
+
+  def select_subcategory
+    logger.info("\n\n---> select_subcategory | params #{params.inspect}  \n\n")
+    @subcategories = Subcategory.where("category_id = ?", params[:id])
+    logger.info("\n\n---> subcategories [#{@subcategories.inspect}]\n\n")
+  end
+
+  def show_drawing
+    @drawings = Link.where("subcategory_id = ? AND skill_id =?", params[:id], session[:skill_level])
+  end
+
+
 end

@@ -1,13 +1,18 @@
-<h1>Welcome to Draw With Me</h1>
+<div data-role="header">
+  <h1>Welcome to Draw With Me</h1>
+  <%= link_to "Add skill", new_skill_path, "data-icon" => "plus", "class" => "ui-btn-right" %>
+</div>
 
 <h3>A drawing tutorial application!</h3>
 
 <p>Please select your drawing skill level.</p>
 
-<ul>
+<div data-role="content">
+  <ul data-role="listview">
 	<% @possible_skills.each do |s| %>
    	<li>
 			<%= link_to s.name, :controller => "skills", :action => "select_category", :id => s.id %>
 		</li>
 	<% end %>
-</ul>
+  </ul>
+</div>

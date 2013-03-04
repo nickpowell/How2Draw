@@ -1,0 +1,23 @@
+<div data-role="header">
+  <h1>&nbsp;Drawings  of [ CATEGORY / SUBCATEGORY NAME HERE ] </h1>
+</div>
+
+<h3>&nbsp;&nbsp;What would you like to draw?</h3>
+
+<div data-role="content">
+  <ul data-role="listview">
+    <% @drawings.each do |d| %>
+    <li>
+      <%= link_to d.name, d.views %>
+    </li>
+    <% end %>
+  </ul>
+</div>
+
+<br><br>
+
+<center>
+  <h6>
+    Created by Nick Powell
+  </h6>
+</center>
