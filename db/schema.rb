@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(:version => 20121104234437) do
   create_table "links", :force => true do |t|
     t.string   "name"
     t.integer  "subcategory_id"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.integer  "views"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "views"
     t.integer  "skill_id"
   end
 

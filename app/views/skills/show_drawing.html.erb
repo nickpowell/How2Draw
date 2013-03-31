@@ -1,14 +1,18 @@
 <div data-role="header">
-  <h1>&nbsp;Drawings  of [ CATEGORY / SUBCATEGORY NAME HERE ] </h1>
+  <h1 class="logo">
+    How &nbsp;&nbsp;<span class="red_header">2</span> &nbsp;&nbsp;Draw
+	</h1>
 </div>
 
-<h3>&nbsp;&nbsp;What would you like to draw?</h3>
+Drawings of [ CATEGORY / SUBCATEGORY NAME HERE ]
+
+<h3>&nbsp;&nbsp;&nbsp;What would you like to draw?</h3>
 
 <div data-role="content">
   <ul data-role="listview">
     <% @drawings.each do |d| %>
     <li>
-      <%= link_to d.name, d.views %>
+      &nbsp;&nbsp;&nbsp;<%= link_to d.name, d.views %>
     </li>
     <% end %>
   </ul>

@@ -1,14 +1,18 @@
 <div data-role="header">
-  <h1>&nbsp;Subcategories of [ CATEGORY NAME HERE ] </h1>
+  <h1 class="logo">
+    How &nbsp;&nbsp;<span class="red_header">2</span> &nbsp;&nbsp;Draw
+	</h1>
 </div>
 
-<h3>&nbsp;&nbsp;What would you like to draw?</h3>
+<h3>&nbsp;&nbsp;&nbsp;Subcategories of [ CATEGORY NAME HERE ] </h3>
+
+<h3>&nbsp;&nbsp;&nbsp;What would you like to draw?</h3>
 
 <div data-role="content">
   <ul data-role="listview">
     <% @subcategories.each do |c| %>
     <li>
-      <%= link_to c.name, :controller => "skills", :action => "show_drawing", :id => c.id %>
+      &nbsp;&nbsp;&nbsp;<%= link_to c.name, :controller => "skills", :action => "show_drawing", :id => c.id %>
     </li>
     <% end %>
   </ul>

@@ -11,3 +11,22 @@
  *= require_self
  *= require_tree .
  */
+
+.red_header {
+  color:red;	 
+  font-size: 36px;
+}
+
+.logo {
+  font-family: 'Berkshire Swash', cursive;
+  // text-shadow: 2px 2px 2px #aaa;
+}
+
+#subhead { text-align: center }
+
+#calltoaction { 
+  text-align: center; 
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+}
