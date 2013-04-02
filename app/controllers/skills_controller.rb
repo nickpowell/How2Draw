@@ -87,17 +87,17 @@ class SkillsController < ApplicationController
 
   def select_category
     @categories = Category.all
-    @users_skill_level = Skill.find(params[:id]).name
+    session[:users_skill_level] = Skill.find(params[:id]).name
     session[:skill_level] = Skill.find(params[:id])
   end
 
   def select_subcategory
-    logger.info("\n\n---> select_subcategory | params #{params.inspect}  \n\n")
+    session[:users_category] = Category.find(params[:id])
     @subcategories = Subcategory.where("category_id = ?", params[:id])
-    logger.info("\n\n---> subcategories [#{@subcategories.inspect}]\n\n")
   end
 
   def show_drawing
+    session[:users_subcategory] = Subcategory.find(params[:id])
     @drawings = Link.where("subcategory_id = ? AND skill_id =?", params[:id], session[:skill_level])
   end
 

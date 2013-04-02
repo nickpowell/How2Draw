@@ -1,25 +1,33 @@
 <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash:400,700,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Molle:400italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+
 
 </head>
 
 <div data-role="header">
-	
   <h1 class="logo">
-  	How &nbsp;&nbsp;<span class="red_header">2</span> &nbsp;&nbsp;Draw
+		<h3 id = "subhead">Teach Me</h3>
   </h1>
-  
-  
-  <%# link_to "Add skill", new_skill_path, "data-icon" => "plus", "class" => "ui-btn-right" %>
 </div>
 
-<h3 id = "subhead">A drawing tutorial application!</h3>
+<center>
+	<h1 class="logo">
+		How <span class="red_header">2</span> Draw
+	</h1>
+<center>
 
-<p id = "calltoaction"> Select your drawing level.</p>
+<p id = "calltoaction"> Choose your drawing level</p>
 
 <div data-role="content">
   <ul data-role="listview">
 	<% @possible_skills.each do |s| %>
-   	<li>&nbsp;&nbsp;&nbsp;<%= link_to s.name, :controller => "skills", :action => "select_category", :id => s.id %></li>
+   	<li>&nbsp;<%= link_to s.name, :controller => "skills", :action => "select_category", :id => s.id %></li>
 	<% end %>
   </ul>
 </div>
+
+<%# link_to "Add skill", new_skill_path, "data-icon" => "plus", "class" => "ui-btn-right" %>
+
+<br>
+<small>Created by Nick Powell 2013</small>

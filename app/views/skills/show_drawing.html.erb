@@ -1,10 +1,13 @@
 <div data-role="header">
-  <h1 class="logo">
-    How &nbsp;&nbsp;<span class="red_header">2</span> &nbsp;&nbsp;Draw
-	</h1>
+    <h2 class="logo">
+    	How &nbsp;<span class="red_header">2</span> &nbsp;Draw
+    </h2>
 </div>
 
-Drawings of [ CATEGORY / SUBCATEGORY NAME HERE ]
+<h3 class="mleft">
+  <%= session[:users_skill_level] %> / <%= session[:users_category].name %> / <%= session[:users_subcategory].name %>
+</h3>
+
 
 <h3>&nbsp;&nbsp;&nbsp;What would you like to draw?</h3>
 
