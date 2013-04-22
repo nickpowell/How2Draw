@@ -21,13 +21,30 @@
 
 <div data-role="content">
   <ul data-role="listview">
+	  
+	  
+	  
+	  
+	  
 	<% @possible_skills.each do |s| %>
-   	<li>&nbsp;<%= link_to s.name, :controller => "skills", :action => "select_category", :id => s.id %></li>
+     <li>
+		 <%= image_tag("#{s.name.downcase}.png", :height => '38', :width => '38', :class => 'skill_icon') %>
+		 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		 <%= link_to s.name, :controller => "skills", :action => "select_category", :id => s.id %>
+	 </li>
 	<% end %>
+	
+	
+	
+	
   </ul>
 </div>
 
 <%# link_to "Add skill", new_skill_path, "data-icon" => "plus", "class" => "ui-btn-right" %>
 
 <br>
-<small>Created by Nick Powell 2013</small>
+<small>Created by Nick Powell 2013</small>	
+
+
+<hr>
+<%= image_tag("rails.png")  %>

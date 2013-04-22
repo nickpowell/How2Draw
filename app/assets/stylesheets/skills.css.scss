@@ -1,3 +1,18 @@
 // Place all the styles related to the Skills controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//ul li:before {
+//  content: url('#{root_url}/images/pencil.gif')
+//}
+
+
+.skill_icon {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.skill_list {
+  margin-left: 115px;
+}
