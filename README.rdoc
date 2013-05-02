@@ -264,3 +264,9 @@ git push heroku master
 heroku apps:rename how2draw
 github: use nick@121871.com - sa...jeff..2xx
 
+
+--
+
+Embed video:
+
+<video autobuffer="autobuffer" autoplay="autoplay" width="480" height="320" controls="controls" src="videos/iphone_app_demo.m4v"</video>

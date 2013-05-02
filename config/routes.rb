@@ -2,10 +2,11 @@ DrawWithMe::Application.routes.draw do
   resources :skills
 
   root :to => 'skills#intro'
-
   match "select_category" => "skills#select_category"
   match "select_subcategory" => "skills#select_subcategory"
   match "drawings" => "skills#show_drawing"
+  match "demo" => "skills#demo"  
+  
 
   resources :links
 

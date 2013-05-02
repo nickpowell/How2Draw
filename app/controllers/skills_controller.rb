@@ -101,5 +101,6 @@ class SkillsController < ApplicationController
     @drawings = Link.where("subcategory_id = ? AND skill_id =?", params[:id], session[:skill_level])
   end
 
-
+  def demo; end
+  
 end

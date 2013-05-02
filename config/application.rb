@@ -11,6 +11,7 @@ end
 
 module DrawWithMe
   class Application < Rails::Application
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
@@ -35,6 +36,7 @@ module DrawWithMe
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
+    config.assets.paths << "#{Rails.root}/app/assets/videos"
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
@@ -55,6 +57,7 @@ module DrawWithMe
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.assets.paths << "#{Rails.root}/app/assets/videos"
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
