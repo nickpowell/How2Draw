@@ -30,11 +30,7 @@
 	<% end %>
 		<li><%= image_tag("demo.jpg", :height => '38', :width => '38', :class => 'skill_icon') %>
 					 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<%= link_to "Watch Demo", "http://how2draw.herokuapp.com/demo" %>
-		</li>
-		<li><%= image_tag("demo.jpg", :height => '38', :width => '38', :class => 'skill_icon') %>
-					 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<%= link_to "Watch Demo 2", { :controller=>"skills", :action=>"demo" }, :target => "_blank" %>
+				<%= link_to "Watch Demo", { :controller=>"skills", :action=>"demo" }, :target => "_blank" %>
 		</li>
   </ul>
 </div>
