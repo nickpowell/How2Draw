@@ -21,11 +21,6 @@
 
 <div data-role="content">
   <ul data-role="listview">
-	  
-	  
-	  
-	  
-	  
 	<% @possible_skills.each do |s| %>
      <li>
 		 <%= image_tag("#{s.name.downcase}.png", :height => '38', :width => '38', :class => 'skill_icon') %>
@@ -33,10 +28,6 @@
 		 <%= link_to s.name, :controller => "skills", :action => "select_category", :id => s.id %>
 	 </li>
 	<% end %>
-	
-	
-	
-	
   </ul>
 </div>
 

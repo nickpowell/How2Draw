@@ -1,6 +1,6 @@
 <div data-role="header">
     <h2 class="logo">
-    	How &nbsp;<span class="red_header">2</span> &nbsp;Draw
+    	  How &nbsp;<span class="red_header">2</span> &nbsp;Draw
     </h2>
 </div>
 
@@ -17,7 +17,8 @@
     <% @categories.each do |c| %>
     <li>
 	  <%= image_tag("#{session[:users_skill_level].downcase}.png", options = {:height => '38', :width => '38', :class => 'skill_icon'} ) %>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to c.name, :controller => "skills", :action => "select_subcategory", :id => c.id %>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <%= link_to c.name, :controller => "skills", :action => "select_subcategory", :id => c.id %>
     </li>
     <% end %>
   </ul>
