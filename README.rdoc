@@ -261,5 +261,6 @@ vendor
   vendor/rails/. This directory is in the load path.
 
 git push heroku master
-
 heroku apps:rename how2draw
+github: use nick@121871.com - sa...jeff..2xx
+
