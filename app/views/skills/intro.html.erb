@@ -28,12 +28,14 @@
 		 <%= link_to s.name, :controller => "skills", :action => "select_category", :id => s.id %>
 	 </li>
 	<% end %>
+	<li><%= image_tag("demo.jpg", :height => '38', :width => '38', :class => 'skill_icon') %>
+				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<%= link_to "Watch Demo", "http://how2draw.herokuapp.com/demo" %>
+	</li>
   </ul>
 </div>
 
 <%# link_to "Add skill", new_skill_path, "data-icon" => "plus", "class" => "ui-btn-right" %>
 
-<br>
-<small>Created by Nick Powell 2013</small>	<br>
 
-<%= link_to "Watch Demo", "http://how2draw.herokuapp.com/demo" %>
+<small>Created by Nick Powell 2013</small>
