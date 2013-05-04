@@ -82,6 +82,7 @@ class SkillsController < ApplicationController
   end
 
   def intro
+    reset_session
     @possible_skills = Skill.all
   end
 

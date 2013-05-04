@@ -17,6 +17,18 @@
   font-size: 68px;
 }
 
+.home_button {
+  color:white;	 
+  font-size: 12px;
+  margin-left: 275px;
+  margin-top: 5px;
+  a:visited {color:#FFFFFF;}
+  a:link {color:#FFFFFF;}      
+  a:visited {color:#FFFFFF;}  
+  a:hover {color:#FFFFFF;}  
+  a:active {color:#FFFFFF;} 
+}
+
 .logo {
  font-family: 'Berkshire Swash', cursive;
  text-shadow: 2px 2px 2px #4099ff;
@@ -40,3 +52,4 @@
   margin-left: 10px;
   font-size:14px;
 }
+
