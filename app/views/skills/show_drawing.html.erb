@@ -16,7 +16,9 @@
     <% @drawings.each do |d| %>
     <li>
       <%= image_tag("#{session[:users_skill_level].downcase}.png", options = {:height => '38', :width => '38', :class => 'skill_icon'} ) %>
-	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to d.name, d.views %>
+	  <%= image_tag("#{session[:users_category].name.downcase}.png", options = {:height => '38', :width => '38', :class => 'category_icon'} ) %>	 
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <%= link_to d.name, d.views %>
     </li>
     <% end %>
   </ul>
