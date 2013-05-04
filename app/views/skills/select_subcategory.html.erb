@@ -14,8 +14,10 @@
   <ul data-role="listview">
     <% @subcategories.each do |c| %>
     <li>
-  	  <%= image_tag("#{session[:users_skill_level].downcase}.png", options = {:height => '38', :width => '38', :class => 'skill_icon'} ) %>
-	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to c.name, :controller => "skills", :action => "show_drawing", :id => c.id %>
+  	  <%= image_tag("#{session[:users_skill_level].downcase}.png", options = {:height => '38', :width => '38', :class => 'skill_icon'} ) %>	  
+	  <%= image_tag("#{session[:users_category].name.downcase}.png", options = {:height => '38', :width => '38', :class => 'category_icon'} ) %>	  	  
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <%= link_to c.name, :controller => "skills", :action => "show_drawing", :id => c.id %>
     </li>
     <% end %>
   </ul>
